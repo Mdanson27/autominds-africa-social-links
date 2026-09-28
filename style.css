@@ -190,3 +190,246 @@ main{padding:14px 0 72px}
   .globeScene{max-width:220px;max-height:220px}
   .globe,.globe__map{max-width:186px;max-height:186px}
 }
+
+
+/* ===== 2026-09-28 globe + identity refinements ===== */
+.loader{
+  background:#fff!important;
+}
+.globeScene{
+  width:270px!important;
+  height:270px!important;
+  margin:0 auto 18px!important;
+}
+.globeGlow{
+  width:238px!important;
+  height:238px!important;
+  background:radial-gradient(circle,rgba(11,94,215,.16),rgba(249,115,22,.09),transparent 72%)!important;
+}
+.globe{
+  width:232px!important;
+  height:232px!important;
+  max-width:232px!important;
+  max-height:232px!important;
+  overflow:hidden!important;
+  position:relative!important;
+  border-radius:50%!important;
+  border:2px solid rgba(11,94,215,.13)!important;
+  background:linear-gradient(180deg,#fbfdff,#edf5ff)!important;
+  box-shadow:inset -24px -16px 50px rgba(11,94,215,.10),0 18px 42px rgba(11,94,215,.08)!important;
+  animation:none!important;
+}
+.globeMapRotator{
+  position:absolute;
+  inset:0;
+  border-radius:50%;
+  overflow:hidden;
+  transform-origin:50% 50%;
+  animation:globeClockwise 11s linear infinite;
+}
+.globeWorldMap{
+  position:absolute;
+  left:2%;
+  top:50%;
+  width:96%!important;
+  max-width:none!important;
+  height:auto!important;
+  transform:translateY(-50%);
+  opacity:.86;
+  filter:sepia(.08) saturate(1.18) hue-rotate(176deg) brightness(1.04);
+}
+@keyframes globeClockwise{
+  from{transform:rotate(0deg)}
+  to{transform:rotate(360deg)}
+}
+.globe__latitude,.globe__longitude{
+  position:absolute;
+  z-index:3;
+  pointer-events:none;
+  border:1px solid rgba(11,94,215,.16);
+}
+.globe__latitude{
+  left:7%;
+  right:7%;
+  height:35%;
+  border-radius:50%;
+}
+.globe__latitude--one{top:20%}
+.globe__latitude--two{bottom:20%}
+.globe__longitude{
+  top:6%;
+  bottom:6%;
+  width:40%;
+  border-radius:50%;
+}
+.globe__longitude--one{left:17%}
+.globe__longitude--two{right:17%}
+.ugandaMarker{
+  position:absolute;
+  z-index:5;
+  left:54.5%;
+  top:51%;
+  width:20px;
+  height:20px;
+  transform:translate(-50%,-50%);
+  display:grid;
+  place-items:center;
+}
+.ugandaMarker i,
+.ugandaMarker:before,
+.ugandaMarker:after{
+  content:"";
+  position:absolute;
+  border-radius:50%;
+}
+.ugandaMarker i{
+  width:8px;
+  height:8px;
+  background:var(--orange);
+  box-shadow:0 0 0 3px #fff,0 0 16px rgba(249,115,22,.65);
+}
+.ugandaMarker:before{
+  width:18px;
+  height:18px;
+  border:2px solid rgba(249,115,22,.82);
+  animation:ugandaPulseRing 1.05s ease-out infinite;
+}
+.ugandaMarker:after{
+  width:28px;
+  height:28px;
+  border:1px solid rgba(249,115,22,.42);
+  animation:ugandaPulseRing 1.05s .22s ease-out infinite;
+}
+.ugandaMarker b{
+  position:absolute;
+  left:16px;
+  top:-8px;
+  padding:2px 4px;
+  border-radius:5px;
+  background:#fff;
+  color:var(--orange);
+  font-size:7px;
+  line-height:1;
+  font-weight:900;
+  box-shadow:0 4px 12px rgba(16,37,64,.08);
+}
+@keyframes ugandaPulseRing{
+  0%{opacity:.95;transform:scale(.55)}
+  100%{opacity:0;transform:scale(1.5)}
+}
+
+.loader__logo{
+  width:104px!important;
+  max-width:104px!important;
+  height:auto!important;
+  max-height:none!important;
+  margin:0 auto 8px!important;
+  padding:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  object-fit:contain!important;
+}
+.loader__kicker{
+  margin-top:2px!important;
+}
+.loader__message{
+  margin:14px auto 0!important;
+  min-height:42px;
+  font-family:Manrope,Inter,sans-serif!important;
+  font-size:clamp(23px,3vw,31px)!important;
+  line-height:1.05!important;
+  font-weight:900!important;
+  letter-spacing:-.035em!important;
+  background:linear-gradient(90deg,#0b5ed7 0%,#f97316 35%,#0b5ed7 70%,#f97316 100%);
+  background-size:220% auto;
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent!important;
+  animation:signalColourMove 2.8s linear infinite;
+}
+@keyframes signalColourMove{
+  to{background-position:220% center}
+}
+
+/* The uploaded AutoMinds logo already includes its own white background. */
+.brand__logo{
+  width:70px!important;
+  height:auto!important;
+  min-width:70px!important;
+  overflow:visible!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+.brand__logo img{
+  width:70px!important;
+  height:auto!important;
+  object-fit:contain!important;
+}
+.profile__logo{
+  width:118px!important;
+  height:auto!important;
+  flex:0 0 118px!important;
+  overflow:visible!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+.profile__logo img{
+  width:118px!important;
+  height:auto!important;
+  object-fit:contain!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+.digitalCard img{
+  padding:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  object-fit:contain!important;
+}
+
+/* Extreme footer signal */
+.footer{
+  margin-top:4px;
+  padding:0!important;
+  background:#0c2b52;
+}
+.footer__inner{
+  min-height:74px;
+  border-top:0!important;
+  color:rgba(255,255,255,.72)!important;
+}
+.footerSignal{
+  font-family:Manrope,Inter,sans-serif;
+  font-size:clamp(12px,1.8vw,17px);
+  font-weight:900;
+  letter-spacing:.045em;
+  background:linear-gradient(90deg,#fff 0%,#f97316 32%,#0b5ed7 64%,#fff 100%);
+  background-size:260% auto;
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  animation:footerSignalMove 3.2s linear infinite;
+}
+@keyframes footerSignalMove{
+  to{background-position:260% center}
+}
+
+@media(max-width:700px){
+  .globeScene{width:238px!important;height:238px!important}
+  .globe{width:206px!important;height:206px!important;max-width:206px!important;max-height:206px!important}
+  .loader__logo{width:96px!important;max-width:96px!important}
+  .loader__message{font-size:clamp(22px,7vw,29px)!important}
+  .brand__logo,.brand__logo img{width:58px!important;min-width:58px!important}
+  .profile__logo{width:100px!important;flex-basis:100px!important}
+  .profile__logo img{width:100px!important}
+  .footer__inner{min-height:92px;display:grid!important;justify-content:center!important;text-align:center}
+}
+@media(max-width:420px){
+  .globeScene{width:220px!important;height:220px!important}
+  .globe{width:188px!important;height:188px!important;max-width:188px!important;max-height:188px!important}
+  .ugandaMarker b{display:none}
+}
