@@ -10,13 +10,13 @@
   <meta property="og:title" content="AutoMinds Africa — Smart Digital Profile">
   <meta property="og:description" content="Change Is Here. Work Smarter. Not Harder.">
   <meta property="og:image" content="logo.jpeg">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/jpeg" href="./logo.jpeg?v=20260928-1448">
   <link rel="preload" as="image" href="logo.jpeg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <style id="critical-css">html,body{margin:0!important;background:#fff!important;color:#102540!important}body{overflow-x:hidden!important}img,svg{display:block;max-width:100%;height:auto}.loader{position:fixed!important;inset:0!important;z-index:99999!important;display:grid!important;place-items:center!important;background:#fff!important;padding:18px!important;overflow:hidden!important}.loader__inner{width:min(440px,100%)!important;text-align:center!important}.globeScene{width:250px!important;height:250px!important;position:relative!important;margin:0 auto 20px!important;display:grid!important;place-items:center!important}.globe{width:212px!important;height:212px!important;border-radius:50%!important;position:relative!important;overflow:hidden!important}.globe__map{width:212px!important;height:212px!important}.loader__logo{width:70px!important;height:70px!important;object-fit:cover!important;margin:0 auto 12px!important;border-radius:21px!important}@media(max-width:520px){.globeScene{width:220px!important;height:220px!important}.globe{width:186px!important;height:186px!important}.globe__map{width:186px!important;height:186px!important}}</style>\n  <link rel="stylesheet" href="./style.css?v=20260928-1434">
+  <style id="critical-css">html,body{margin:0!important;background:#fff!important;color:#102540!important}body{overflow-x:hidden!important}img,svg{display:block;max-width:100%;height:auto}.loader{position:fixed!important;inset:0!important;z-index:99999!important;display:grid!important;place-items:center!important;background:#fff!important;padding:18px!important;overflow:hidden!important}.loader__inner{width:min(440px,100%)!important;text-align:center!important}.globeScene{width:250px!important;height:250px!important;position:relative!important;margin:0 auto 20px!important;display:grid!important;place-items:center!important}.globe{width:212px!important;height:212px!important;border-radius:50%!important;position:relative!important;overflow:hidden!important}.globe__map{width:212px!important;height:212px!important}.loader__logo{width:70px!important;height:70px!important;object-fit:cover!important;margin:0 auto 12px!important;border-radius:21px!important}@media(max-width:520px){.globeScene{width:220px!important;height:220px!important}.globe{width:186px!important;height:186px!important}.globe__map{width:186px!important;height:186px!important}}</style>  <link rel="stylesheet" href="./style.css?v=20260928-1448">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -26,28 +26,22 @@
       <div class="globeScene" aria-hidden="true">
         <div class="globeGlow"></div>
         <div class="globe">
-          <span class="globe__orbit globe__orbit--one"></span>
-          <span class="globe__orbit globe__orbit--two"></span>
-          <svg viewBox="0 0 320 320" class="globe__map">
-            <defs>
-              <clipPath id="clipGlobe"><circle cx="160" cy="160" r="132"/></clipPath>
-            </defs>
-            <circle cx="160" cy="160" r="132" fill="#f5f9ff"/>
-            <g clip-path="url(#clipGlobe)">
-              <ellipse cx="160" cy="160" rx="132" ry="52" fill="none" stroke="#bfd7f9" stroke-width="1"/>
-              <ellipse cx="160" cy="160" rx="70" ry="132" fill="none" stroke="#d8e7fb" stroke-width="1"/>
-              <path d="M12 160h296M160 28v264" stroke="#d8e7fb" stroke-width="1"/>
-              <g class="worldLand">
-                <path d="M52 96l20-13 22 5 15 12 18 2 11 13-5 12-21 3-10 14-13 4-7 17-15-1-13-12-8-21 6-18z"/>
-                <path d="M111 171l13 3 10 13 2 17-7 23-12 16-10-5-2-17 7-17-6-17z"/>
-                <path d="M148 91l18-11 28 3 15 12 22 4 20 16-5 13-18 2-18-8-12 10-3 18 10 17-3 22-11 22-15 8-9-12 1-21-13-14-7-20 10-17 1-16-13-13z"/>
-                <path d="M171 139l17 5 9 13 2 18-9 31-17 24-13-8-6-25 4-19-9-18 4-15z"/>
-                <path d="M241 209l18-8 18 6 12 14-5 16-21 9-18-8-6-15z"/>
-              </g>
-              <circle class="ugandaDot" cx="184" cy="165" r="5"/>
-              <circle class="ugandaPulse" cx="184" cy="165" r="11"/>
-            </g>
-          </svg>
+          <span class="globe__latitude globe__latitude--one"></span>
+          <span class="globe__latitude globe__latitude--two"></span>
+          <span class="globe__longitude globe__longitude--one"></span>
+          <span class="globe__longitude globe__longitude--two"></span>
+
+          <div class="globeMapRotator">
+            <img
+              class="globeWorldMap"
+              src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Blank_world_map.svg/960px-Blank_world_map.svg.png"
+              alt=""
+            >
+            <span class="ugandaMarker">
+              <i></i>
+              <b>UG</b>
+            </span>
+          </div>
         </div>
       </div>
 
@@ -227,11 +221,11 @@
   <footer class="footer">
     <div class="wrap footer__inner">
       <span>© <span id="year"></span> AutoMinds Africa · Kampala, Uganda</span>
-      <span>Work Smarter. Not Harder.</span>
+      <strong class="footerSignal">CHANGE IS HERE. · WORK SMARTER. NOT HARDER.</strong>
     </div>
   </footer>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script src="./app.js?v=20260928-1434" defer></script>
+  <script src="./app.js?v=20260928-1448" defer></script>
 </body>
 </html>
