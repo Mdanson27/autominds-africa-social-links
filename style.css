@@ -78,3 +78,67 @@
   .hero-teaser p{display:none}
   .section-title h2,.about-block h2{font-size:28px!important}
 }
+
+/* Mobile responsiveness final pass — 2026-10-30 */
+@media (max-width:850px){
+  html,body{width:100%;max-width:100%;overflow-x:hidden}
+  body{min-width:0}
+  main{width:100%;padding-top:64px;padding-bottom:0}
+  .topbar{width:100%;max-width:100%}
+  .screen{width:100%;max-width:100%;min-height:0!important;padding:16px 12px 20px!important;overflow:hidden}
+  .hero{display:block!important;padding-top:14px!important;padding-bottom:78px!important}
+  .hero-grid,.showcase-grid,.final-grid{width:100%;max-width:100%;margin:0;display:block!important}
+  .hero-copy,.section-title,.value-panel,.about-block,.connect-card,footer{width:100%;max-width:100%;min-width:0}
+  .hero h1{font-size:clamp(44px,14.5vw,62px)!important;line-height:.9!important;letter-spacing:-.06em!important;margin:12px 0 8px!important}
+  .role{font-size:11px!important;line-height:1.35!important;margin:0 0 8px!important}
+  .lead{font-size:11px!important;line-height:1.48!important;margin:0!important}
+  .cta-row{margin-top:13px!important;gap:8px!important}
+  .btn{height:44px!important;font-size:10px!important;padding:0 8px!important}
+  .mini-links{margin-top:8px!important;gap:6px!important}
+  .mini-links a,.mini-links button{min-height:48px!important;padding:5px 2px!important}
+  .signal-strip{margin-top:8px!important;gap:6px!important}
+  .signal-strip>div{min-height:54px!important;padding:7px!important}
+  .hero-teaser{margin-top:8px!important;min-height:0!important;padding:10px 11px!important}
+  .hero-teaser p{font-size:8px!important;line-height:1.35!important}
+  .showcase{padding-top:14px!important;background:#f7f9fd}
+  .section-title{margin:0 0 10px!important}
+  .section-title h2,.about-block h2{font-size:clamp(29px,9vw,38px)!important;line-height:.98!important;letter-spacing:-.045em!important;margin-top:7px!important}
+  .film-card{width:100%;aspect-ratio:16/10;min-height:0!important;height:auto!important;border-radius:18px!important;margin:0 0 10px!important}
+  .film-card video{position:absolute;width:100%;height:100%;object-fit:cover}
+  .value-panel{margin-top:0!important;padding:14px!important;border-radius:18px!important}
+  .value-panel h3{font-size:20px!important;line-height:1.05!important;margin:8px 0!important}
+  .value-panel>p:not(.kicker){font-size:9.5px!important;line-height:1.45!important}
+  .value-list{margin-top:10px!important}
+  .value-list>div{padding:8px 0!important}
+  .text-link{padding-top:9px!important}
+  .final-screen{padding-top:14px!important;padding-bottom:20px!important}
+  .about-block>p{font-size:10px!important;line-height:1.48!important;margin-bottom:0}
+  .capabilities{margin-top:10px!important;gap:5px!important}
+  .capabilities span{padding:6px 8px!important;font-size:7.5px!important}
+  .connect-card{margin-top:12px!important;padding:14px!important;border-radius:18px!important}
+  .connect-card h3{font-size:20px!important;line-height:1.06!important;margin:8px 0 10px!important}
+  .contact-stack a{padding:9px 0!important}
+  .save-final{height:44px!important;margin-top:10px!important}
+  footer{margin-top:14px!important;padding-top:10px!important;gap:6px!important;font-size:7px!important}
+  .mobile-dock{display:grid!important;left:8px!important;right:8px!important;bottom:calc(62px + env(safe-area-inset-bottom))!important;height:52px!important;padding:5px!important;border-radius:16px!important;opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .22s ease,transform .22s ease}
+  .mobile-dock.is-active{opacity:1;transform:none;pointer-events:auto}
+  .toast{bottom:calc(126px + env(safe-area-inset-bottom))!important}
+}
+@media (max-width:390px){
+  .screen{padding-left:10px!important;padding-right:10px!important}
+  .hero h1{font-size:clamp(42px,14vw,55px)!important}
+  .brand b{font-size:9px!important}.brand small{font-size:6.5px!important}
+  .cta-row{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important}
+  .btn{font-size:9px!important}
+  .signal-strip>div{padding:6px!important}
+  .section-title h2,.about-block h2{font-size:clamp(27px,8.7vw,34px)!important}
+}
+@media (max-width:340px){
+  .topbar{padding:0 8px!important}.brand small{display:none!important}
+  .screen{padding-left:8px!important;padding-right:8px!important}
+  .hero h1{font-size:40px!important}
+  .role,.lead{font-size:9.5px!important}
+  .mini-links span{font-size:7px!important}
+  .signal-strip small{font-size:6.5px!important}
+  .hero-teaser p{display:none!important}
+}
